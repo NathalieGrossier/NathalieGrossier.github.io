@@ -4053,12 +4053,18 @@ body.is-touch #banner {
   }
 
   #banner .content header h2 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   #banner .content .image {
-    height: 9em;
-    width: 9em;
+    height: 14em;
+    width: 14em;
+    margin: 2em 0 0 0;
+  }
+
+  #banner .content header p {
+    font-size: 1.1em;
+    line-height: 1.6em;
   }
 
   /* Nav */
@@ -4296,6 +4302,15 @@ body.is-touch #banner {
 
   #banner .content {
     padding: 3em 1.5625em 5.25em 1.5625em;
+  }
+
+  #banner .content .image {
+    height: 12em;
+    width: 12em;
+  }
+
+  #banner .content header h2 {
+    font-size: 1.75em;
   }
 
   /* Footer */

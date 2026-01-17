@@ -16,6 +16,17 @@
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
+    <!-- Slick Carousel CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
   </head>
   <body class="is-preload landing">
     <div id="page-wrapper">
@@ -53,7 +64,7 @@
       <section id="banner">
         <div class="content">
           <header>
-            <h2>Nathalie Grossier</h2>
+            <h2>Nathalie G.</h2>
             <p>
               Développeuse Web et Web Mobile <br />en recherche d'alternance
               <br />
@@ -106,6 +117,114 @@
           </div>
         </div>
         <a href="#two" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- UNIVERS GRAPHIQUE avec Carrousel -->
+      <section id="univers" class="wrapper style1 special">
+        <div class="container">
+          <header class="major">
+            <h2>Univers graphique</h2>
+            <p>Peinture • Dessin traditionnel • Art numérique</p>
+          </header>
+
+          <p>
+            Passionnée par le dessin traditionnel et numérique, je développe un
+            univers graphique personnel à travers la peinture, le dessin
+            (peinture acrylique, pastel, aquarelles, crayons graphites, encre de
+            Chine...) et les outils numériques (Procreate).
+          </p>
+
+          <!-- Carrousel -->
+          <div class="art-carousel" style="max-width: 800px; margin: 2em auto">
+            <div>
+              <img
+                src="images/art1.png"
+                alt="Création 1"
+                style="
+                  width: 100%;
+                  max-height: 500px;
+                  object-fit: contain;
+                  border-radius: 5px;
+                "
+              />
+            </div>
+            <div>
+              <img
+                src="images/art2.jpg"
+                alt="Création 2"
+                style="
+                  width: 100%;
+                  max-height: 500px;
+                  object-fit: contain;
+                  border-radius: 5px;
+                "
+              />
+            </div>
+            <div>
+              <img
+                src="images/art3.png"
+                alt="Création 3"
+                style="
+                  width: 100%;
+                  max-height: 500px;
+                  object-fit: contain;
+                  border-radius: 5px;
+                "
+              />
+            </div>
+            <div>
+              <img
+                src="images/art4.png"
+                alt="Création 4"
+                style="
+                  width: 100%;
+                  max-height: 500px;
+                  object-fit: contain;
+                  border-radius: 5px;
+                "
+              />
+            </div>
+            <div>
+              <img
+                src="images/art5.png"
+                alt="Création 5"
+                style="
+                  width: 100%;
+                  max-height: 500px;
+                  object-fit: contain;
+                  border-radius: 5px;
+                "
+              />
+            </div>
+            <div>
+              <img
+                src="images/art6.png"
+                alt="Création 6"
+                style="
+                  width: 100%;
+                  max-height: 500px;
+                  object-fit: contain;
+                  border-radius: 5px;
+                "
+              />
+            </div>
+          </div>
+
+          <footer class="major" style="margin-top: 2em">
+            <ul class="actions special">
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="button"
+                  >Voir plus sur Instagram</a
+                >
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <a href="#projets" class="goto-next scrolly">Next</a>
       </section>
 
       <!-- Two - PROJETS -->
@@ -451,5 +570,25 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- Slick Carousel JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".art-carousel").slick({
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: true,
+          arrows: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+        });
+      });
+    </script>
   </body>
 </html>
