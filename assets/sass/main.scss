@@ -1732,7 +1732,7 @@ body.landing {
 #banner {
   background-attachment: fixed;
   background-color: _palette(accent2);
-  background-image: url("../../images/pic04.jpg");
+  background-image: url("../../images/theme_bleu.webp");
   background-position: center center;
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -2390,4 +2390,77 @@ body.is-touch {
       }
     }
   }
+}
+
+// /* ========== RÉORGANISATION MOBILE : H2 → IMAGE → TEXTE ========== */
+
+// @media screen and (max-width: 980px) {
+//   /* Section Mon profil */
+//   #one .content {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   #one .content .container {
+//     order: 2; /* Texte en dernier */
+//   }
+
+//   #one .image.main {
+//     order: 1; /* Image après le header */
+//     margin-bottom: 2em;
+//   }
+
+//   /* Pour que le header (h2) reste en premier, pas besoin de le toucher car il est déjà avant l'image dans le DOM */
+
+//   /* Section Projets mobiles React Native */
+//   #two .content {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   #two .content header {
+//     order: 1; /* Header (h2) en premier */
+//   }
+
+//   #two .image.main {
+//     order: 2; /* Image juste après le header */
+//     margin: 0 0 2em 0 !important;
+//   }
+
+//   #two .content > p,
+//   #two .content > ul {
+//     order: 3; /* Texte et boutons en dernier */
+//   }
+
+//   /* Section E-commerce */
+//   #three .content {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   #three .content header {
+//     order: 1; /* Header (h2) en premier */
+//   }
+
+//   #three .image.main {
+//     order: 2; /* Image juste après le header */
+//     margin: 0 0 2em 0 !important;
+//   }
+
+//   #three .content > p,
+//   #three .content > ul {
+//     order: 3; /* Texte et boutons en dernier */
+//   }
+// }
+
+#one {
+  box-shadow:
+    0 0.5em 1.5em 0 rgba(0, 124, 145, 0.4),
+    0 0 3em 0 rgba(0, 124, 145, 0.2) !important;
+}
+
+#three {
+  box-shadow:
+    0 0.5em 1.5em 0 rgba(0, 124, 145, 0.4),
+    0 0 3em 0 rgba(0, 124, 145, 0.2) !important;
 }

@@ -37,20 +37,35 @@ $font: (
 );
 
 // Palette.
+// Palette.
 $palette: (
-  bg: #1c1d26,
-  bg-transparent: rgba(23, 24, 32, 0.95),
+  bg: #2c2c2c,
+  // ← Gris anthracite (au lieu de noir pur)
+  bg-transparent: rgba(44, 44, 44, 0.95),
+  // ← Gris anthracite transparent
   fg-bold: #ffffff,
+  // ← Texte blanc
   fg: rgba(255, 255, 255, 0.75),
+  // ← Texte blanc semi-transparent
   fg-light: rgba(255, 255, 255, 0.5),
+  // ← Texte blanc léger
   fg-lighter: rgba(255, 255, 255, 0.15),
+  // ← Texte blanc très léger
   border: rgba(255, 255, 255, 0.3),
+  // ← Bordures blanches
   border-bg: rgba(255, 255, 255, 0.075),
+  // ← Fond bordures
   border2: rgba(255, 255, 255, 0.5),
+  // ← Bordures moyennes
   border2-bg: rgba(255, 255, 255, 0.25),
+  // ← Fond bordures moyennes
   accent1: #007c91,
-  accent2: #272833,
-  accent2-transparent: rgba(39, 40, 51, 0.965),
+  // ← TURQUOISE (on garde !)
+  accent2: #1f1f1f,
+
+  accent2-transparent: rgba(58, 58, 58, 0.965),
+  // ← Gris moyen transparent
   accent3: #5480f1,
-  accent4: #39c088,
+  // ← Bleu (on garde)
+  accent4: #39c088, // ← Vert (on garde)
 );

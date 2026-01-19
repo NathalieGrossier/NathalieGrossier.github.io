@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Nathalie Grossier - recherche alternance CDA (sept. 2026)</title>
+    <title>Nathalie G. - recherche alternance CDA (sept. 2026)</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -32,7 +32,7 @@
     <div id="page-wrapper">
       <!-- Header -->
       <header id="header">
-        <h1 id="logo"><a href="index.html">CV Nathalie Grossier</a></h1>
+        <h1 id="logo"><a href="index.html">Portfolio Nathalie G.</a></h1>
         <nav id="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -63,7 +63,8 @@
       <section id="banner">
         <div class="content">
           <header>
-            <h2>Nathalie Grossier</h2>
+            <h2>Nathalie G.</h2>
+            <p><strong>CV en cours de réalisation</strong></p>
             <p>
               Développeuse Web et Web Mobile <br />en recherche d'alternance
               <br />
@@ -590,7 +591,7 @@
       <!-- Footer -->
       <footer id="footer">
         <p style="color: rgba(255, 255, 255, 0.75); margin-bottom: 2em">
-          📧 nathaliegrossier@outlook.fr
+          📧 todo@outlook.fr
         </p>
         <p style="color: rgba(255, 255, 255, 0.75); margin-bottom: 2em">
           <i class="fas fa-map-marker-alt" style="margin-right: 0.5em"></i>
@@ -600,7 +601,7 @@
         <ul class="icons">
           <li>
             <a
-              href="https://www.linkedin.com/in/nathalie-grossier-09434525b/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               class="icon brands alt fa-linkedin-in"
@@ -614,7 +615,7 @@
           </li>
           <li>
             <a
-              href="https://github.com/NathalieGrossier"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               class="icon brands alt fa-github"
@@ -622,16 +623,13 @@
             >
           </li>
           <li>
-            <a
-              href="mailto:nathaliegrossier@outlook.fr"
-              class="icon solid alt fa-envelope"
-            >
+            <a href="todo@outlook.fr" class="icon solid alt fa-envelope">
               <span class="label">Email</span>
             </a>
           </li>
         </ul>
         <ul class="copyright">
-          <li>&copy; Nathalie Grossier. Tous droits réservés.</li>
+          <li>&copy; Nathalie G.. Tous droits réservés.</li>
           <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </footer>
@@ -664,6 +662,52 @@
           slidesToScroll: 1,
           adaptiveHeight: true,
         });
+      });
+    </script>
+    <script>
+      // Réorganiser les sections sur mobile
+      function reorganizeMobile() {
+        if (window.innerWidth <= 980) {
+          // Section #one (Mon profil)
+          const sectionOne = document.querySelector("#one");
+          const imageOne = sectionOne.querySelector(".image.main");
+          const contentOne = sectionOne.querySelector(".content");
+          const headerOne = contentOne.querySelector("header");
+
+          if (imageOne && headerOne) {
+            headerOne.after(imageOne);
+          }
+
+          // Section #two (Projets mobiles)
+          const sectionTwo = document.querySelector("#two");
+          const imageTwo = sectionTwo.querySelector(".image.main");
+          const contentTwo = sectionTwo.querySelector(".content");
+          const headerTwo = contentTwo.querySelector("header");
+
+          if (imageTwo && headerTwo) {
+            headerTwo.after(imageTwo);
+          }
+
+          // Section #three (E-commerce)
+          const sectionThree = document.querySelector("#three");
+          const imageThree = sectionThree.querySelector(".image.main");
+          const contentThree = sectionThree.querySelector(".content");
+          const headerThree = contentThree.querySelector("header");
+
+          if (imageThree && headerThree) {
+            headerThree.after(imageThree);
+          }
+        }
+      }
+
+      // Exécuter au chargement de la page
+      $(document).ready(function () {
+        reorganizeMobile();
+      });
+
+      // Exécuter au redimensionnement (optionnel)
+      $(window).on("resize", function () {
+        reorganizeMobile();
       });
     </script>
   </body>
