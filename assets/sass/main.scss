@@ -641,12 +641,26 @@ header {
   }
 
   &.major {
-    margin: 0 0 (_size(element-margin) * 2) 0;
+    margin: 0 0 (_size(element-margin)) 0;
     position: relative;
     text-align: center;
 
     &:after {
       background: _palette(accent1);
+      content: "";
+      display: inline-block;
+      height: 0.2em;
+      max-width: 20em;
+      width: 75%;
+    }
+  }
+  &.major1 {
+    margin: 0 0 (_size(element-margin) * 2) 0;
+    position: relative;
+    text-align: center;
+
+    &:after {
+      background: _palette(accent5);
       content: "";
       display: inline-block;
       height: 0.2em;

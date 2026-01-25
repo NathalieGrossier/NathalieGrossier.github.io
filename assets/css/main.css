@@ -1614,12 +1614,25 @@ header h6 + p {
   line-height: 1.5em;
 }
 header.major {
-  margin: 0 0 4em 0;
+  margin: 0 0 2em 0;
   position: relative;
   text-align: center;
 }
 header.major:after {
   background: #007c91;
+  content: "";
+  display: inline-block;
+  height: 0.2em;
+  max-width: 20em;
+  width: 75%;
+}
+header.major1 {
+  margin: 0 0 4em 0;
+  position: relative;
+  text-align: center;
+}
+header.major1:after {
+  background: #ffffff;
   content: "";
   display: inline-block;
   height: 0.2em;
