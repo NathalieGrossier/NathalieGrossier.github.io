@@ -36,24 +36,26 @@
         <nav id="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="#one">Mon profil</a></li>
+
             <li>
-              <a href="#">Layouts</a>
+              <a href="#">Portfolio</a>
               <ul>
-                <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                <li><a href="no-sidebar.html">No Sidebar</a></li>
-                <li>
-                  <a href="#">Submenu</a>
-                  <ul>
-                    <li><a href="#">Option 1</a></li>
-                    <li><a href="#">Option 2</a></li>
-                    <li><a href="#">Option 3</a></li>
-                    <li><a href="#">Option 4</a></li>
-                  </ul>
-                </li>
+                <li><a href="#univers">Univers graphique</a></li>
+                <li><a href="#two">Applications mobiles</a></li>
+                <li><a href="#three">E-commerce (stage)</a></li>
               </ul>
             </li>
-            <li><a href="elements.html">Elements</a></li>
+
+            <li>
+              <a href="#">Parcours</a>
+              <ul>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#formation">Formation</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#competences">Compétences</a></li>
             <li><a href="#" class="button primary">Me contacter</a></li>
           </ul>
         </nav>
@@ -606,18 +608,41 @@
               Échangeons !
             </p>
           </header>
-          <form method="post" action="#" class="cta">
+          <form
+            action="https://formspree.io/f/xgololrk"
+            method="POST"
+            class="cta"
+          >
             <div class="row gtr-uniform gtr-50">
-              <div class="col-8 col-12-xsmall">
+              <div class="col-6 col-12-xsmall">
+                <input
+                  type="text"
+                  name="nom"
+                  id="nom"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
+              <div class="col-6 col-12-xsmall">
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Your Email Address"
+                  placeholder="Votre email"
+                  required
                 />
               </div>
-              <div class="col-4 col-12-xsmall">
-                <input type="submit" value="Get Started" class="fit primary" />
+              <div class="col-12">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Votre message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <input type="submit" value="Envoyer" class="fit primary" />
               </div>
             </div>
           </form>
