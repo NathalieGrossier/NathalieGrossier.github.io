@@ -197,7 +197,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #003e46 !important;
+  color: #000 !important;
   border-bottom-color: transparent;
 }
 
@@ -2981,7 +2981,7 @@ body.is-touch #banner {
     padding: 4.0625em 1.5em 4.875em 1.5em;
   }
   #banner .content header h2 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
   #banner .content .image {
     height: 9em;
@@ -3195,4 +3195,9 @@ body.is-touch #banner {
 strong.highlight-cv,
 b.highlight-cv {
   font-weight: 700;
+}
+
+/* Trait blanc pour la section Univers graphique */
+.wrapper.style2#univers header.major:after {
+  background: #ffffff;
 }/*# sourceMappingURL=main.css.map */

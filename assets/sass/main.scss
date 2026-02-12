@@ -268,7 +268,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: _palette(accent1) !important;
+    color: _palette(hovera) !important;
     border-bottom-color: transparent;
   }
 }
@@ -2180,7 +2180,7 @@ body.is-touch {
 
       header {
         h2 {
-          font-size: 1.5em;
+          font-size: 2em;
         }
       }
 
@@ -2509,4 +2509,9 @@ strong.highlight-cv,
 b.highlight-cv {
   // color: #007c91;
   font-weight: 700;
+}
+
+/* Trait blanc pour la section Univers graphique */
+.wrapper.style2#univers header.major:after {
+  background: #ffffff;
 }
