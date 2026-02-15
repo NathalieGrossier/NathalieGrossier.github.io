@@ -268,7 +268,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: _palette(hovera) !important;
+    color: _palette(fg-bold) !important; // Blanc au lieu de noir
     border-bottom-color: transparent;
   }
 }
@@ -1611,27 +1611,37 @@ body.is-touch {
   min-width: 12em;
   padding: 0.25em 0;
 
-  > li {
+  li {
     border-top: solid 1px rgba(255, 255, 255, 0.035);
     padding: 0;
 
     a,
     span {
       border: 0;
-      color: _palette(fg);
+      color: _palette(fg) !important; // Forcer la couleur par défaut
       display: block;
       padding: 0.1em 1em;
       text-decoration: none;
+      transition: font-size 0.2s ease, color 0.2s ease;
+      
+      &:hover {
+        color: _palette(fg-bold) !important; // Blanc au hover
+        font-size: 1.15em !important; // Agrandissement au hover
+        transform: scale(1.05); // Animation supplémentaire
+      }
     }
 
     &:first-child {
       border-top: 0;
     }
-
-    &.active {
+    
+    // Forcer aussi pour les li actifs
+    &.active,
+    &:hover {
       > a,
       > span {
-        color: _palette(accent1);
+        color: _palette(fg-bold) !important; // Blanc même quand actif
+        font-size: 1.15em !important;
       }
     }
   }
@@ -1709,6 +1719,7 @@ body.landing {
           height: inherit;
           line-height: inherit;
           outline: 0;
+          transition: font-size 0.2s ease, transform 0.2s ease;
 
           &.button {
             height: 2em;
@@ -1719,12 +1730,19 @@ body.landing {
           &:not(.button):before {
             margin-right: 0.5em;
           }
+          
+          // Agrandissement au hover pour les liens normaux (pas les boutons)
+          &:not(.button):hover {
+            font-size: 1.15em;
+            transform: scale(1.05);
+          }
         }
 
         &.active {
           > a,
           > span {
-            color: _palette(accent1);
+            color: _palette(fg-bold) !important; // Blanc au lieu de bleu
+            font-size: 1.15em !important; // Rester agrandi quand actif
           }
         }
 
@@ -1801,13 +1819,18 @@ body.landing {
       vertical-align: middle;
 
       h2 {
-        font-size: 2.5em;
+        font-size: 3em; // Augmenté de 2.5em à 3em
         margin: 0;
       }
 
       p {
+        font-size: 1.4em; // Ajouté pour augmenter la taille des paragraphes
         margin: (_size(element-margin) * 0.25) 0 0 0;
         top: 0;
+      }
+
+      h3 {
+        font-size: 1em; // Taille modérée pour "Secteur Arras - Lille"
       }
     }
 
@@ -1951,6 +1974,20 @@ body.is-touch {
   #banner {
     .content {
       padding: $size-wrapper-pad-tb;
+
+      header {
+        h2 {
+          font-size: 3.5em; // Encore plus grand sur écrans <= 1280px
+        }
+
+        p {
+          font-size: 1.6em; // Paragraphes plus grands
+        }
+
+        h3 {
+          font-size: 1.1em; // Localisation un peu plus grande sur petits écrans
+        }
+      }
     }
   }
 
@@ -2045,6 +2082,19 @@ body.is-touch {
         display: block;
         margin: 0 0 _size(element-margin) 0;
         text-align: center;
+
+        // Reset des tailles pour mobile (annule les modifs de "<=large")
+        h2 {
+          font-size: 2.5em; // Taille d'origine
+        }
+
+        p {
+          font-size: 1.4em; // Paragraphes encore plus grands en mobile
+        }
+
+        h3 {
+          font-size: 1.2em; // h3 "Secteur Arras - Lille" encore plus grand
+        }
       }
 
       .image {
@@ -2185,8 +2235,8 @@ body.is-touch {
       }
 
       .image {
-        height: 9em;
-        width: 9em;
+        height: 11em;
+        width: 11em;
       }
     }
   }
