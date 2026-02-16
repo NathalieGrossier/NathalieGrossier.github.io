@@ -36,15 +36,15 @@
         <nav id="nav">
           <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="#one">Mon profil</a></li>
+            <li><a href="#profil">Mon profil</a></li>
 
             <li>
               <a href="#">Portfolio</a>
               <ul>
                 <li><a href="#univers">Univers graphique</a></li>
-                <li><a href="#two">Applications mobiles</a></li>
+                <li><a href="#application_mobile">Applications mobiles</a></li>
                 <li>
-                  <a href="#three">Plateforme E-commerce</a>
+                  <a href="#stage">Plateforme E-commerce</a>
                   <ul>
                     <li>
                       <a href="projet-ecommerce.html">Détails techniques</a>
@@ -62,8 +62,8 @@
               </ul>
             </li>
 
-            <li><a href="#four">Compétences</a></li>
-            <li><a href="#five" class="button primary">Me contacter</a></li>
+            <li><a href="#compétences_techniques">Compétences</a></li>
+            <li><a href="#contact" class="button primary">Me contacter</a></li>
           </ul>
         </nav>
       </header>
@@ -88,11 +88,10 @@
           </header>
           <span class="image"><img src="images/photo.jpg" alt="" /></span>
         </div>
-        <a href="#one" class="goto-next scrolly">Next</a>
+        <a href="#profil" class="goto-next scrolly">Next</a>
       </section>
 
-      <!-- One -->
-      <section id="one" class="spotlight style1 bottom">
+      <section id="profil" class="spotlight style1 bottom">
         <span class="image fit main"
           ><img src="images/jay-zhang-J10TawzEW6Q-unsplash.jpg" alt=""
         /></span>
@@ -156,7 +155,7 @@
             </div>
           </div>
         </div>
-        <a href="#two" class="goto-next scrolly">Next</a>
+        <a href="#application_mobile" class="goto-next scrolly">Next</a>
       </section>
 
       <!-- UNIVERS GRAPHIQUE avec Carrousel -->
@@ -256,8 +255,8 @@
         <a href="#projets" class="goto-next scrolly">Next</a>
       </section>
 
-      <!-- Two - PROJETS -->
-      <section id="two" class="spotlight style2 right">
+      <!-- Application mobile -->
+      <section id="application_mobile" class="spotlight style2 right">
         <span class="image fit main"
           ><img
             src="images/rahul-chakraborty-xsGxhtAsfSA-unsplash.jpg"
@@ -285,11 +284,11 @@
             <li><a href="#" class="button">En savoir plus</a></li>
           </ul> -->
         </div>
-        <a href="#three" class="goto-next scrolly">Next</a>
+        <a href="#stage" class="goto-next scrolly">Next</a>
       </section>
 
       <!-- Three - PROJET 2 -->
-      <section id="three" class="spotlight style2 left">
+      <section id="stage" class="spotlight style2 left">
         <span class="image fit main bottom"
           ><img
             src="images/projetstage.png"
@@ -346,7 +345,7 @@
           </ul> -->
         </div>
 
-        <a href="#three" class="goto-next scrolly">Next</a>
+        <a href="#stage" class="goto-next scrolly">Next</a>
       </section>
 
       <!-- EXPÉRIENCES -->
@@ -508,11 +507,14 @@
             </div>
           </div>
         </div>
-        <a href="#four" class="goto-next scrolly">Next</a>
+        <a href="#compétences_techniques" class="goto-next scrolly">Next</a>
       </section>
 
       <!-- Four -->
-      <section id="four" class="wrapper style1 special fade-up">
+      <section
+        id="compétences_techniques"
+        class="wrapper style1 special fade-up"
+      >
         <div class="container">
           <header class="major">
             <h2>Mes compétences techniques</h2>
@@ -580,7 +582,7 @@
       </section>
 
       <!-- Five -->
-      <section id="five" class="wrapper style2 special fade">
+      <section id="contact" class="wrapper style2 special fade">
         <div class="container">
           <header>
             <h2>Me contacter</h2>
@@ -709,34 +711,34 @@
       // Réorganiser les sections sur mobile
       function reorganizeMobile() {
         if (window.innerWidth <= 980) {
-          // Section #one (Mon profil)
-          const sectionOne = document.querySelector("#one");
-          const imageOne = sectionOne.querySelector(".image.main");
-          const contentOne = sectionOne.querySelector(".content");
-          const headerOne = contentOne.querySelector("header");
+          // Section Mon Profil
+          const sectionProfil = document.querySelector("#profil");
+          const imageProfil = sectionProfil.querySelector(".image.main");
+          const contentProfil = sectionProfil.querySelector(".content");
+          const headerProfil = contentProfil.querySelector("header");
 
-          if (imageOne && headerOne) {
-            headerOne.after(imageOne);
+          if (imageProfil && headerProfil) {
+            headerProfil.after(imageProfil);
           }
 
-          // Section #two (Projets mobiles)
-          const sectionTwo = document.querySelector("#two");
-          const imageTwo = sectionTwo.querySelector(".image.main");
-          const contentTwo = sectionTwo.querySelector(".content");
-          const headerTwo = contentTwo.querySelector("header");
+          // Section Application Mobile
+          const sectionAppli = document.querySelector("#application_mobile");
+          const imageAppli = sectionAppli.querySelector(".image.main");
+          const contentAppli = sectionAppli.querySelector(".content");
+          const headerAppli = contentAppli.querySelector("header");
 
-          if (imageTwo && headerTwo) {
-            headerTwo.after(imageTwo);
+          if (imageAppli && headerAppli) {
+            headerAppli.after(imageAppli);
           }
 
-          // Section #three (E-commerce)
-          const sectionThree = document.querySelector("#three");
-          const imageThree = sectionThree.querySelector(".image.main");
-          const contentThree = sectionThree.querySelector(".content");
-          const headerThree = contentThree.querySelector("header");
+          // Section #stage (E-commerce)
+          const sectionStage = document.querySelector("#stage");
+          const imageStage = sectionStage.querySelector(".image.main");
+          const contentStage = sectionStage.querySelector(".content");
+          const headerStage = contentStage.querySelector("header");
 
-          if (imageThree && headerThree) {
-            headerThree.after(imageThree);
+          if (imageStage && headerStage) {
+            headerStage.after(imageStage);
           }
         }
       }

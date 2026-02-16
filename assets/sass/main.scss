@@ -15,6 +15,8 @@
 
 // Breakpoints.
 
+// revoir le CSS, nesting, variables, mixins, etc. pour éviter les redondances et les styles inutiles
+
 @include breakpoints(
   (
     xlarge: (
@@ -2460,74 +2462,13 @@ body.is-touch {
   }
 }
 
-// /* ========== RÉORGANISATION MOBILE : H2 → IMAGE → TEXTE ========== */
-
-// @media screen and (max-width: 980px) {
-//   /* Section Mon profil */
-//   #one .content {
-//     display: flex;
-//     flex-direction: column;
-//   }
-
-//   #one .content .container {
-//     order: 2; /* Texte en dernier */
-//   }
-
-//   #one .image.main {
-//     order: 1; /* Image après le header */
-//     margin-bottom: 2em;
-//   }
-
-//   /* Pour que le header (h2) reste en premier, pas besoin de le toucher car il est déjà avant l'image dans le DOM */
-
-//   /* Section Projets mobiles React Native */
-//   #two .content {
-//     display: flex;
-//     flex-direction: column;
-//   }
-
-//   #two .content header {
-//     order: 1; /* Header (h2) en premier */
-//   }
-
-//   #two .image.main {
-//     order: 2; /* Image juste après le header */
-//     margin: 0 0 2em 0 !important;
-//   }
-
-//   #two .content > p,
-//   #two .content > ul {
-//     order: 3; /* Texte et boutons en dernier */
-//   }
-
-//   /* Section E-commerce */
-//   #three .content {
-//     display: flex;
-//     flex-direction: column;
-//   }
-
-//   #three .content header {
-//     order: 1; /* Header (h2) en premier */
-//   }
-
-//   #three .image.main {
-//     order: 2; /* Image juste après le header */
-//     margin: 0 0 2em 0 !important;
-//   }
-
-//   #three .content > p,
-//   #three .content > ul {
-//     order: 3; /* Texte et boutons en dernier */
-//   }
-// }
-
-#one {
+#profil {
   box-shadow:
     0 0.5em 1.5em 0 rgba(0, 124, 145, 0.4),
     0 0 3em 0 rgba(0, 124, 145, 0.2) !important;
 }
 
-#three {
+#stage {
   box-shadow:
     0 0.5em 1.5em 0 rgba(0, 124, 145, 0.4),
     0 0 3em 0 rgba(0, 124, 145, 0.2) !important;
@@ -2543,7 +2484,7 @@ body.is-touch {
 }
 
 /* Compétences techniques - icônes turquoise */
-#four {
+#compétences_techniques {
   .icon.major {
     box-shadow:
       0 0.25em 0.75em 0 rgba(0, 124, 145, 0.4),
