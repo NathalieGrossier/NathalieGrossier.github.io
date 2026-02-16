@@ -2924,7 +2924,7 @@ body.is-touch #banner {
     font-size: 2.5em;
   }
   #banner .content header p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   #banner .content header h3 {
     font-size: 1.2em;
@@ -2965,9 +2965,6 @@ body.is-touch #banner {
     font-size: 1em;
   }
   /* Section/Article */
-  header p br {
-    display: none;
-  }
   header h2 + p {
     font-size: 1em;
   }

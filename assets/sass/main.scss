@@ -1622,8 +1622,10 @@ body.is-touch {
       display: block;
       padding: 0.1em 1em;
       text-decoration: none;
-      transition: font-size 0.2s ease, color 0.2s ease;
-      
+      transition:
+        font-size 0.2s ease,
+        color 0.2s ease;
+
       &:hover {
         color: _palette(fg-bold) !important; // Blanc au hover
         font-size: 1.15em !important; // Agrandissement au hover
@@ -1634,7 +1636,7 @@ body.is-touch {
     &:first-child {
       border-top: 0;
     }
-    
+
     // Forcer aussi pour les li actifs
     &.active,
     &:hover {
@@ -1719,7 +1721,9 @@ body.landing {
           height: inherit;
           line-height: inherit;
           outline: 0;
-          transition: font-size 0.2s ease, transform 0.2s ease;
+          transition:
+            font-size 0.2s ease,
+            transform 0.2s ease;
 
           &.button {
             height: 2em;
@@ -1730,7 +1734,7 @@ body.landing {
           &:not(.button):before {
             margin-right: 0.5em;
           }
-          
+
           // Agrandissement au hover pour les liens normaux (pas les boutons)
           &:not(.button):hover {
             font-size: 1.15em;
@@ -2083,13 +2087,12 @@ body.is-touch {
         margin: 0 0 _size(element-margin) 0;
         text-align: center;
 
-        // Reset des tailles pour mobile (annule les modifs de "<=large")
         h2 {
           font-size: 2.5em; // Taille d'origine
         }
 
         p {
-          font-size: 1.4em; // Paragraphes encore plus grands en mobile
+          font-size: 1.2em; // Paragraphes encore plus grands en mobile
         }
 
         h3 {
@@ -2150,12 +2153,6 @@ body.is-touch {
   /* Section/Article */
 
   header {
-    p {
-      br {
-        display: none;
-      }
-    }
-
     h2 + p {
       font-size: 1em;
     }
